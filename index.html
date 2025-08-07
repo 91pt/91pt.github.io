@@ -14,22 +14,22 @@
         }
         
         body {
-            background: linear-gradient(135deg, #1a3a6c 0%, #2c5a9d 100%);
+            background: #ffffff; /* 纯白色背景 */
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 20px;
-            color: #fff;
+            color: #333; /* 字体颜色改为黑色 */
             position: relative;
             overflow: hidden;
         }
         
         .container {
-            background: rgba(255, 255, 255, 0.12);
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
             border-radius: 20px;
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
             padding: 40px;
             max-width: 700px;
             width: 100%;
@@ -37,7 +37,7 @@
             position: relative;
             overflow: hidden;
             z-index: 2;
-            border: 1px solid rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(0, 0, 0, 0.1);
         }
         
         .header {
@@ -69,13 +69,13 @@
             align-items: center;
             box-shadow: 0 5px 15px rgba(255, 106, 0, 0.3);
             border: 3px solid rgba(255, 255, 255, 0.3);
-            overflow: hidden; /* 确保图片不会超出圆形区域 */
+            overflow: hidden;
         }
         
         .logo img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* 确保图片完全覆盖圆形区域 */
+            object-fit: cover;
             border-radius: 50%;
         }
         
@@ -83,14 +83,13 @@
             font-size: 26px;
             font-weight: 700;
             margin-bottom: 8px;
-            color: #ffffff;
+            color: #1a3a6c; /* 深蓝色文字 */
             letter-spacing: 0.5px;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
         
         .school-subname {
             font-size: 16px;
-            color: rgba(255, 255, 255, 0.85);
+            color: #2c5a9d; /* 蓝色文字 */
             letter-spacing: 0.3px;
         }
         
@@ -102,11 +101,9 @@
         
         h1 {
             font-size: 38px;
-            color: #ffd700;
             margin-bottom: 30px;
             position: relative;
             padding-bottom: 15px;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
         
         h1::after {
@@ -117,25 +114,26 @@
             transform: translateX(-50%);
             width: 100px;
             height: 3px;
-            background: linear-gradient(to right, transparent, #ffd700, transparent);
+            background: linear-gradient(to right, transparent, #ff9a00, transparent);
         }
         
         .warning {
             display: inline-block;
             position: relative;
             padding: 0 10px;
-            animation: pulse 2s infinite;
+            animation: pulse 1s infinite;
+            color: #ff0000; /* 红色文字 */
         }
         
         p {
             font-size: 18px;
             line-height: 1.8;
             margin-bottom: 15px;
-            color: rgba(255, 255, 255, 0.95);
+            color: #444; /* 深灰色文字 */
         }
         
         .security-message {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 154, 0, 0.1);
             border-radius: 12px;
             padding: 20px;
             margin: 25px 0;
@@ -148,31 +146,30 @@
         
         .security-message i {
             font-size: 24px;
-            color: #ffd700;
+            color: #ff9a00;
         }
         
         .welcome-section {
-            background: linear-gradient(to right, rgba(255, 154, 0, 0.2), rgba(26, 115, 232, 0.2));
+            background: linear-gradient(to right, rgba(255, 154, 0, 0.1), rgba(26, 115, 232, 0.1));
             border-radius: 12px;
             padding: 20px;
             margin-top: 30px;
-            border: 1px solid rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(0, 0, 0, 0.1);
         }
         
         .welcome-text {
             font-size: 24px;
             font-weight: 600;
             letter-spacing: 0.5px;
-            color: #ffffff;
-            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+            color: #1a3a6c;
         }
         
         .footer {
             margin-top: 30px;
             padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
             font-size: 14px;
-            color: rgba(255, 255, 255, 0.7);
+            color: #666;
         }
         
         .decoration {
@@ -224,10 +221,29 @@
             50% { transform: translateY(-20px) rotate(10deg); }
         }
         
+        /* 更夸张的动画效果 */
         @keyframes pulse {
-            0% { transform: scale(1); text-shadow: 0 0 0 rgba(255, 215, 0, 0.5); }
-            50% { transform: scale(1.05); text-shadow: 0 0 15px rgba(255, 215, 0, 0.8); }
-            100% { transform: scale(1); text-shadow: 0 0 0 rgba(255, 215, 0, 0.5); }
+            0% { 
+                transform: scale(1) rotate(0deg); 
+                text-shadow: 0 0 0 rgba(255, 0, 0, 0.3); 
+            }
+            25% { 
+                transform: scale(1.5) rotate(5deg); 
+                text-shadow: 0 0 20px rgba(255, 0, 0, 0.8); 
+            }
+            50% { 
+                transform: scale(1.8) rotate(-5deg); 
+                text-shadow: 0 0 30px rgba(255, 0, 0, 1); 
+                color: #ff5500;
+            }
+            75% { 
+                transform: scale(1.5) rotate(5deg); 
+                text-shadow: 0 0 20px rgba(255, 0, 0, 0.8); 
+            }
+            100% { 
+                transform: scale(1) rotate(0deg); 
+                text-shadow: 0 0 0 rgba(255, 0, 0, 0.3); 
+            }
         }
         
         @media (max-width: 600px) {
@@ -271,7 +287,6 @@
     <div class="container">
         <div class="header">
             <div class="logo">
-                <!-- 校徽图片替换为image.png -->
                 <img src="image.png" alt="">
             </div>
             <div class="school-name">福建师范大学平潭附属中学</div>
@@ -291,6 +306,9 @@
             </div>
         </div>
         
+        <div class="footer">
+            <p>© 2023 福建师范大学平潭附属中学 | 网络安全教育宣传页</p>
+        </div>
     </div>
 
     <script>
@@ -318,6 +336,15 @@
             decorations.forEach((dec, index) => {
                 dec.style.animation = `float ${8 + index}s infinite ease-in-out`;
             });
+            
+            // 添加额外的动画效果给警告文字
+            const warningText = document.querySelector('.warning');
+            setInterval(() => {
+                warningText.style.animation = 'none';
+                setTimeout(() => {
+                    warningText.style.animation = 'pulse 1s infinite';
+                }, 10);
+            }, 3000);
         });
     </script>
 </body>
